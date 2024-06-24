@@ -1,0 +1,36 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.difficulties {
+    display: flex;
+    gap: 10px;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+    transition: 0.3s;
+    border: 1px solid white;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.45)
+}
+
+.easy {
+    color: black;
+    background-color: greenyellow;
+}
+
+.normal {
+    color: black;
+    background-color: yellow;
+}
+
+.hard {
+    background-color: orange;
+}
+
+.extreme {
+    background-color: red;
+}

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { getDifficulties } from '../../service/Api'
 import { useNavigate } from 'react-router-dom'
-import Spinner from '../Spinner'
 import { ClipLoader } from 'react-spinners'
+import '../../styles/style.css'
+
 
 const HomePage = () => {
 
@@ -38,20 +39,25 @@ const HomePage = () => {
     }
 
     return (
-        loading ? <ClipLoader color="#c42a1f" size={50} /> :
-            <>
-                <div>PREGUNTADOS</div>
-                <div className='difficulties'>
-                    {difficulties.map((difficulty, index) => (
-                        <button key={index} value={difficulty} onClick={handleDifficulty}>
-                            {difficulty}
-                        </button>
-                    ))}
-                </div>
-                <button onClick={handlePlay}>Start game</button>
-            </>
+        <div className='page'>
+            {
+                loading ? <ClipLoader color="#c42a1f" size={50} /> :
+                    <>
+                        <div>PREGUNTADOS</div>
+                        <div className='difficulties'>
+                            {difficulties.map((difficulty, index) => (
+                                <button
+                                    key={index} value={difficulty}
+                                    onClick={handleDifficulty} className={`btn ${difficulty}`}>
+                                    {difficulty}
+                                </button>
+                            ))}
+                        </div>
+                        <button onClick={handlePlay}>Start game</button>
+                    </>
 
-
+            }
+        </div>
     )
 }
 
