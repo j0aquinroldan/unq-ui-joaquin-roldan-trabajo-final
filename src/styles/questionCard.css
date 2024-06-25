@@ -1,0 +1,30 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #3d3d3d;
+    border-radius: 15px;
+}
+
+.question {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    height: 100px;
+    padding: 20px;
+    background-color: aliceblue;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 15px;
+
+}
+
+.true {
+    background-color: rgb(35, 195, 35);
+}
+
+.false {
+    background-color: rgb(255, 40, 40);
+}
