@@ -1,4 +1,6 @@
 .page {
+    /* background: rgb(255, 255, 255); */
+    /* background: linear-gradient(133deg, rgba(255, 255, 255, 1) 6%, rgba(165, 202, 255, 1) 73%); */
     display: flex;
     flex-direction: column;
     gap: 10px;

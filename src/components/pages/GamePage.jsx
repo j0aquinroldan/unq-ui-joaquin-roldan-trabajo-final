@@ -24,12 +24,12 @@ const GamePage = () => {
 
 
         <div className='page'>
+            correctas = {localStorage.getItem('count') + "/" + questions.length}
 
             {!isLoading ?
                 index < questions.length ?
                     <QuestionCard question={questions[index]} setIndex={setIndex} /> :
                     <>
-                        correctas = {localStorage.getItem('count') + "/" + questions.length}
                         <button onClick={() => { navigate('../home') }}>Home</button>
                     </>
 
