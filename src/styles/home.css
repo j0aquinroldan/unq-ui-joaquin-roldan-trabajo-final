@@ -13,18 +13,18 @@
 .btn:focus,
 .btn:active {
     transition: 0.3s;
-    border: 1px solid white;
-    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.45)
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.45)
 }
 
 .easy {
     color: black;
-    background-color: greenyellow;
+    background-color: rgb(0, 196, 0);
 }
 
 .normal {
     color: black;
-    background-color: yellow;
+    background-color: rgb(193, 193, 0);
 }
 
 .hard {

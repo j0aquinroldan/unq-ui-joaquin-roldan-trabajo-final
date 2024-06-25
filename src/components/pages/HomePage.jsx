@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { getDifficulties } from '../../service/Api'
 import { useNavigate } from 'react-router-dom'
 import { ClipLoader } from 'react-spinners'
-import '../../styles/style.css'
+import '../../styles/home.css'
 
 
 const HomePage = () => {

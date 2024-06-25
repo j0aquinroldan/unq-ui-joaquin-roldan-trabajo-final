@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { getQuestions } from '../../service/Api'
 import QuestionCard from '../QuestionCard'
 import { useNavigate } from 'react-router-dom'
+import '../../styles/game.css'
+
 
 const GamePage = () => {
 
@@ -19,25 +21,25 @@ const GamePage = () => {
 
 
     return (
-        <>
 
-            <div>
 
-                {!isLoading ?
-                    index < questions.length ?
-                        <QuestionCard question={questions[index]} setIndex={setIndex} /> :
-                        <>
-                            correctas = {localStorage.getItem('count') + "/" + questions.length}
-                            <button onClick={() => { navigate('../home') }}>Home</button>
-                        </>
+        <div className='page'>
 
-                    :
-                    null
-                }
-                {console.log(index)}
-            </div>
+            {!isLoading ?
+                index < questions.length ?
+                    <QuestionCard question={questions[index]} setIndex={setIndex} /> :
+                    <>
+                        correctas = {localStorage.getItem('count') + "/" + questions.length}
+                        <button onClick={() => { navigate('../home') }}>Home</button>
+                    </>
 
-        </>
+                :
+                null
+            }
+            {console.log(index)}
+        </div>
+
+
     )
 }
 
