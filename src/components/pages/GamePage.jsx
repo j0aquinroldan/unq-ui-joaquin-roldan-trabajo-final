@@ -3,6 +3,7 @@ import { getQuestions } from '../../service/Api'
 import QuestionCard from '../QuestionCard'
 import { useNavigate } from 'react-router-dom'
 import '../../styles/game.css'
+import { ClipLoader } from 'react-spinners'
 
 
 const GamePage = () => {
@@ -24,17 +25,26 @@ const GamePage = () => {
 
 
         <div className='page'>
-            correctas = {localStorage.getItem('count') + "/" + questions.length}
 
-            {!isLoading ?
-                index < questions.length ?
-                    <QuestionCard question={questions[index]} setIndex={setIndex} /> :
-                    <>
-                        <button onClick={() => { navigate('../home') }}>Home</button>
-                    </>
 
+
+            {isLoading ?
+
+                <ClipLoader color="#005daf" size={50} />
                 :
-                null
+                <>
+                    <div className='count'>
+                        correct answers:
+                        {localStorage.getItem('count') + "/" + questions.length}
+                    </div>
+                    {index < questions.length ?
+                        <QuestionCard question={questions[index]} setIndex={setIndex} /> :
+                        <>
+                            <button onClick={() => { navigate('../home') }}>Home</button>
+                            {/* {setQuestions([])} */}
+                        </>
+                    }
+                </>
             }
             {console.log(index)}
         </div>

@@ -1,7 +1,31 @@
-.page {
-    /* background: rgb(255, 255, 255); */
-    /* background: linear-gradient(133deg, rgba(255, 255, 255, 1) 6%, rgba(165, 202, 255, 1) 73%); */
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+/* .page {
+    background: rgb(255, 255, 255);
+background: linear-gradient(133deg, rgba(255, 255, 255, 1) 6%, rgba(165, 202, 255, 1) 73%);
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 10px;
+}
+
+*/
+.count {
+    position: absolute;
+    /* Posiciona la caja de manera absoluta */
+    top: 1em;
+    /* Alinea la caja con la parte superior del contenedor */
+    right: 1em;
+    /* Alinea la caja con la parte derecha del contenedor */
+    padding: 1em;
+    font-weight: bold;
+    background-color: crimson;
+    color: white;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: -1px 1px 0px 0px black,
+        -2px 2px 0px 0px black,
+        -3px 3px 0px 0px black,
+        -4px 4px 0px 0px black,
+        -5px 5px 0px 0px black;
 }
