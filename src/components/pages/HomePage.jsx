@@ -55,7 +55,7 @@ const HomePage = () => {
                                 </button>
                             ))}
                         </div>
-                        <button className=' start-btn' onClick={handlePlay}>Start game</button>
+                        <button className='btn-l start-btn' onClick={handlePlay}>Start game</button>
                     </>
 
             }

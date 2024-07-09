@@ -1,25 +1,10 @@
-/* .page {
-    background: rgb(255, 255, 255);
-background: linear-gradient(133deg, rgba(255, 255, 255, 1) 6%, rgba(165, 202, 255, 1) 73%);
-height: 100vh;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: 10px;
-}
-
-*/
 .count {
     position: absolute;
-    /* Posiciona la caja de manera absoluta */
-    top: 1em;
-    /* Alinea la caja con la parte superior del contenedor */
-    right: 1em;
-    /* Alinea la caja con la parte derecha del contenedor */
-    padding: 1em;
+    top: 2%;
+    right: 1%;
+    padding: 0.5em;
     font-weight: bold;
-    background-color: crimson;
+    background-color: rgb(54, 200, 54);
     color: white;
     border: 3px solid black;
     border-radius: 10px;
@@ -28,4 +13,22 @@ gap: 10px;
         -3px 3px 0px 0px black,
         -4px 4px 0px 0px black,
         -5px 5px 0px 0px black;
+    text-align: center;
+}
+
+p {
+    margin: 0;
+}
+
+.count>p:last-child {
+    font-size: 200%;
+}
+
+@media (max-width: 620px) {
+    .count {
+        top: 5%;
+        right: 2%;
+        padding: 0.2em;
+        font-size: 0.7em;
+    }
 }
