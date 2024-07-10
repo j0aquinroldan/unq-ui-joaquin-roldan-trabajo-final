@@ -30,7 +30,7 @@ const QuestionCard = ({ question, setIndex }) => {
 
         setTimeout(() => {
             setIndex((prevIndex) => (prevIndex + 1))
-        }, 2000);
+        }, 1000);
 
     }
 

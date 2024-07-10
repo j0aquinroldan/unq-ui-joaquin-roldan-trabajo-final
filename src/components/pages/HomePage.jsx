@@ -3,6 +3,7 @@ import { getDifficulties } from '../../service/Api'
 import { useNavigate } from 'react-router-dom'
 import { ClipLoader } from 'react-spinners'
 import '../../styles/home.css'
+import { Logo } from '../Logo'
 
 
 const HomePage = () => {
@@ -41,19 +42,20 @@ const HomePage = () => {
     return (
         <div className='page'>
             {
-                loading ? <ClipLoader color="#c42a1f" size={50} /> :
+                loading ? <ClipLoader color="#005daf" size={50} /> :
                     <>
-                        <div>PREGUNTADOS</div>
+                        <div className='text'><Logo /></div>
+                        <div>Select a difficulty:</div>
                         <div className='difficulties'>
                             {difficulties.map((difficulty, index) => (
                                 <button
                                     key={index} value={difficulty}
-                                    onClick={handleDifficulty} className={`btn ${difficulty}`}>
+                                    onClick={handleDifficulty} className={`difficulty ${difficulty}`}>
                                     {difficulty}
                                 </button>
                             ))}
                         </div>
-                        <button onClick={handlePlay}>Start game</button>
+                        <button className='btn-l start-btn' onClick={handlePlay}>Start game</button>
                     </>
 
             }
