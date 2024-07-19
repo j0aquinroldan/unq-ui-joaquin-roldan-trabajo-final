@@ -11,9 +11,9 @@ const HomePage = () => {
     const [difficulties, setDifficulties] = useState([])
     const [diff, setDiff] = useState('')
     const [loading, setLoading] = useState(true)
+    const [prompt, setPrompt] = useState(false)
     const navigate = useNavigate()
 
-    console.log(difficulties)
 
     useEffect(() => {
         localStorage.setItem('count', 0)
@@ -35,6 +35,8 @@ const HomePage = () => {
             localStorage.setItem('difficulty', diff);
             console.log(`diste play ${localStorage.getItem('difficulty')}`);
             navigate('../game')
+        } else {
+            setPrompt(true)
         }
 
     }
@@ -56,6 +58,7 @@ const HomePage = () => {
                             ))}
                         </div>
                         <button className='btn-l start-btn' onClick={handlePlay}>Start game</button>
+                        {prompt ? <p>you must select a difficulty to play</p> : null}
                     </>
 
             }
