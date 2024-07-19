@@ -4,7 +4,6 @@ import '../styles/questionCard.css'
 
 const QuestionCard = ({ question, setIndex }) => {
 
-    const [answer, setAnswer] = useState(null)
     const [correctOption, setCorrectOption] = useState(null)
     const [clickedOption, setClickedOption] = useState(null)
 
@@ -17,7 +16,7 @@ const QuestionCard = ({ question, setIndex }) => {
     const handleAnswer = (option) => {
 
         postAnswer(question.id, option).then(({ data }) => {
-            setAnswer(data.answer)
+            // setAnswer(data.answer)
             setClickedOption(option)
             if (data.answer) {
                 const count = Number(localStorage.getItem('count')) || 0;
