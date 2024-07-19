@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { ClipLoader } from 'react-spinners'
 import '../../styles/home.css'
 import { Logo } from '../Logo'
+import Modal from '../Modal'
 
 
 const HomePage = () => {
@@ -11,7 +12,7 @@ const HomePage = () => {
     const [difficulties, setDifficulties] = useState([])
     const [diff, setDiff] = useState('')
     const [loading, setLoading] = useState(true)
-    const [prompt, setPrompt] = useState(false)
+    const [modal, setModal] = useState(false)
     const navigate = useNavigate()
 
 
@@ -36,10 +37,14 @@ const HomePage = () => {
             console.log(`diste play ${localStorage.getItem('difficulty')}`);
             navigate('../game')
         } else {
-            setPrompt(true)
+            toggleModal()
         }
-
     }
+
+    const toggleModal = () => {
+        setModal(!modal);
+    }
+    console.log(modal)
 
     return (
         <div className='page'>
@@ -58,7 +63,8 @@ const HomePage = () => {
                             ))}
                         </div>
                         <button className='btn-l start-btn' onClick={handlePlay}>Start game</button>
-                        {prompt ? <p>you must select a difficulty to play</p> : null}
+                        {modal ? <Modal text={'you must select a difficulty in order to play'} toggleModal={toggleModal} />
+                            : null}
                     </>
 
             }
